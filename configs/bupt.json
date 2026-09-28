@@ -1,0 +1,13 @@
+{
+  "dataset": "bupt",
+  "method": "l2rwplus",
+  "data_root": "data",
+  "seed": 0,
+  "trial": 1,
+  "rounds": 100,
+  "tau": 0.0,
+  "topk": 5,
+  "relabel_seed": 1,
+  "lr": 0.2,
+  "workers": 4
+}

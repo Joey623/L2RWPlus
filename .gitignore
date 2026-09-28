@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+.venv*/
+*.egg-info/
+build/
+dist/
+.DS_Store
+outputs/
+*.log
+# Data and model resources are distributed through Hugging Face.
+/data/
+/checkpoints/
+/results/
+*.pth
