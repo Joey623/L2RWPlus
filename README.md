@@ -4,14 +4,19 @@ Welcome to our repo for L2RW+.
 
 ## Environment
 
-Our experiments run on Linux (aarch64) with Python 3.11.15, PyTorch 2.13.0, torchvision 0.28.0, and CUDA 13.0. `requirement.txt` contains the full Python package snapshot of this environment, including CUDA runtime libraries and analysis tools.
-
-Run the following commands from the project directory:
+Run the following commands to clone the repository and install the dependencies in a Conda environment:
 
 ```bash
-cd L2RWPLUS
-python -m pip install -r requirement.txt --extra-index-url https://download.pytorch.org/whl/cu130
+git clone https://github.com/Joey623/L2RWPlus.git
+cd L2RWPlus
+conda create -n l2rwplus -c conda-forge python=3.11.15 pip -y
+conda activate l2rwplus
+python -m pip install -r requirement.txt \
+    'torch==2.13.0+cu130' 'torchvision==0.28.0+cu130' \
+    --extra-index-url https://download.pytorch.org/whl/cu130
 ```
+
+These commands install the CUDA 13.0 build of PyTorch. Use a Linux machine with a compatible NVIDIA driver and keep the `l2rwplus` environment activated for training and evaluation.
 
 ## Data and checkpoints
 
